@@ -40,4 +40,5 @@ bot code using the below function.
 `npx javascript-obfuscator bots/mybot.cjs --output bots/<yourname>.cjs `
 
 Best practice is to write your code in `bots/mybot.cjs` file(you need to create it), which is already added in .gitignore so it will
-not be pushed to repo. So you can just execute above with your name, and your obfuscated bot should be ready.
+not be pushed to repo. And we included the above command in `package.json` in `npm run bot-compile` 
+So you can just execute above after modifying your output name in `package.json` and your obfuscated bot should be ready.

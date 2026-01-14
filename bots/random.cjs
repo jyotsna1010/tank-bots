@@ -11,7 +11,7 @@ function main(mapData){
 
            },
            {
-                type: "opposition",
+                type: "opponent",
                 position: [0,1],
                 direction: "s",
                  diamonds: 4,

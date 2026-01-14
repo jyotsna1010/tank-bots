@@ -156,8 +156,7 @@ class Game {
     round(){
         // console.log("round");
         this.CURRENT_ROUND++;
-
-        const aAction = this.botA([
+        const botAInputs = [
             {
                 type: "you",
                 ...this.playerA
@@ -166,11 +165,8 @@ class Game {
                 type: "opponent",
                 ...this.playerB
             },
-            this.diamond,
-            this.bullet
-        ]);
-
-        const bAction = this.botB([
+        ];
+        const botBInputs = [
             {
                 type: "you",
                 ...this.playerB
@@ -179,9 +175,33 @@ class Game {
                 type: "opponent",
                 ...this.playerA
             },
-            this.diamond,
-            this.bullet
-        ]);
+        ]
+
+        if (this.diamond.visible){
+            botAInputs.push({
+                type: "diamond",
+                ...this.diamond,
+            });
+            botBInputs.push({
+                type: "diamond",
+                ...this.diamond,
+            })
+        }
+
+        if (this.bullet.visible){
+            botAInputs.push({
+                type: "bullet",
+                ...this.bullet,
+            });
+            botBInputs.push({
+                type: "bullet",
+                ...this.bullet,
+            })
+        }
+
+        const aAction = this.botA(botAInputs);
+
+        const bAction = this.botB(botBInputs);
 
         console.log("round", this.CURRENT_ROUND);
 

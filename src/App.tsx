@@ -29,7 +29,7 @@ function App() {
 
     const timer = useRef<number>(0);
 
-    useCallback(function playRound(){
+    const playRound = useCallback(function(){
         if (round >= gameData.length){
             clearInterval(timer.current);
             return;

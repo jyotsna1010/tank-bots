@@ -47,7 +47,9 @@ function App() {
 
     useEffect(() => {
         console.log("gameData", gameData.length);
-        // game.init(setUpdate);
+        if (round >= gameData.length){
+            return;
+        }
 
         timer.current = setInterval(function(){
             playRound();

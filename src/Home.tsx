@@ -34,7 +34,7 @@ function Home() {
                         </tr>
                         </thead>
                         <tbody>
-                        {typedWins.sort(a => a.elo).reverse().map((winner,i) => (
+                        {typedWins.sort((a,b) => b.elo - a.elo).map((winner,i) => (
                             <tr>
                                 <td>#{i+1}</td>
                                 <td>{winner.name}</td>

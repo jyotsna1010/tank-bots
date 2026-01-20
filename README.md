@@ -18,7 +18,7 @@ This is a developer bot competition game, where 2 developers bot fight.
 - The tanks have only 1 bullet at beginning of the game.
 - If 2 tanks land in same position, they both get destroyed and game ends, who ever has highest diamonds win.
 
-## How to play
+## How to create Bot
 - We have few sample bots at `bots` folder, `/random.cjs` etc. 
 - You can clone them and create your own file and modify them later.
 - To run the game you can use ```node fight.cjs <bot1_path> <bot2_path>``` command.
@@ -58,4 +58,12 @@ Command finds all bots in `/bots` folder and fights every bot with other bot 200
 Thus showcasing the leading bot currently.
 
 **To see the current bot rankings goto: https://sriramdazn.github.io/tank-bots/#/dashboard**
+
+### Submitting your bot
+- Ever though it is a public repo, not everyone is allowed to commit thier code into it.
+- The right way to submit your bot is using a PR.
+- But not by creating a new branch like you usually do, but follow the below steps.
+  - Fork your repo
+  - Push changes to their fork
+  - Open a PR against your repo
 
